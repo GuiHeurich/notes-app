@@ -1,7 +1,7 @@
 (function(exports) {
-  function Note() {
-    this.text = "New note text";
-  };
+  function Note(text) {
+    this.text = text;
+  }
 
   exports.Note = Note;
 })(this);
