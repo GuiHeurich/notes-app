@@ -5,13 +5,13 @@ var assert = {
         "assertion failed: " + assertionToCheck + " is not truthy"
       );
     }
-  }
+  },
 
-  // isArray: function(assertionToCheck) {
-  //   if (typeof assertionToCheck !== "array") {
-  //     throw new Error(
-  //       "assertion failed: " + assertionToCheck + " is not an Array"
-  //     );
-  //   }
-  // }
+  isArray: function(assertionToCheck) {
+    if (!Array.isArray(assertionToCheck)) {
+      throw new Error(
+        "assertion failed: " + assertionToCheck + " is not an Array"
+      );
+    }
+  }
 };
