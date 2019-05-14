@@ -1,11 +1,6 @@
-(function(exports) {
-  function testTextStoredAsPropertyOfNote() {
-    var note = new Note();
+function testTextStoredAsPropertyOfNote() {
+  var note = new Note();
+  assert.isTrue(note.text === "New note text");
+};
 
-    if (note.text != "New note text") {
-      throw new Error("Text not stored on note");
-    }
-  };
-
-  testTextStoredAsPropertyOfNote();
-})(this);
+testTextStoredAsPropertyOfNote();
