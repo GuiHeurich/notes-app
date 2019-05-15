@@ -1,6 +1,6 @@
 function returnsAllTheNotesStoredInTheArray() {
   var notelist = new NoteList();
-  notelist.createNote("New note text");
+  notelist.createNote();
   assert.isArray(notelist.all());
 }
 
