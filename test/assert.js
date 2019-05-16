@@ -13,5 +13,11 @@ var assert = {
         "assertion failed: " + assertionToCheck + " is not an Array"
       );
     }
+  },
+
+  contains: function(assertionOne, assertionTwo) {
+    if (!assertionOne.includes(assertionTwo)) {
+      throw new Error(`${assertionOne} does not contain ${assertionTwo}`);
+    }
   }
 };
