@@ -1,0 +1,27 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node node_modules/http-server/bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhe0756/notes-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhe0756/notes-app/issues"
+  },
+  "homepage": "https://github.com/guilhe0756/notes-app#readme"
+}
