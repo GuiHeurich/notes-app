@@ -1,14 +1,14 @@
-function returnsAllTheNotesStoredInTheArray() {
+function returnsArray() {
   var notelist = new NoteList();
-  notelist.createNote();
+  notelist.create();
   assert.isArray(notelist.all());
 }
 
-function createsAndStoresASingleNote() {
+function returnsANote() {
   var notelist = new NoteList();
-  notelist.createNote("New note text");
-  assert.isTrue(notelist.all()[0] === "New note text");
+  notelist.create("New note text");
+  assert.isTrue(notelist.all()[0].text === "New note text");
 }
 
-returnsAllTheNotesStoredInTheArray();
-createsAndStoresASingleNote();
+returnsArray();
+returnsANote();

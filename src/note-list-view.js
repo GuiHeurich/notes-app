@@ -1,19 +1,26 @@
 (function(exports) {
-  function NoteListView() {
-    this.noteLists = [];
-  };
+  function NoteListView(notelist) {
+    this.noteList = notelist;
+  }
 
-  NoteListView.prototype.createNoteList = function() {
-    var notelist = new NoteList();
-    this.noteLists.push(notelist);
-    return notelist;
-  };
-
-  NoteListView.prototype.displayNotes = function () {
-    var notesHTML = this.noteLists;
-    return `<ul><li><div>${notesHTML[0].all()}</div></li></ul>`;
+  NoteListView.prototype = {
+    display: function() {
+      var notes = this.noteList.all();
+      if (notes.length === 0) {
+        return "<ul><li><div></div></li></ul>";
+      } else {
+        return [
+          "<ul>",
+          notes
+            .map(function(note) {
+              return "<li><div>" + note.getText() + "</div></li>";
+            })
+            .join(""),
+          "</ul>"
+        ].join("");
+      }
+    }
   };
 
   exports.NoteListView = NoteListView;
-
-})(this)
+})(this);
