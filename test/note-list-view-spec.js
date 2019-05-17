@@ -11,7 +11,7 @@
     notelist.create("Favourite food: pesto");
     assert.isTrue(
       notelistview.display() ===
-        "<ul><li><div>Favourite food: pesto</div></li></ul>"
+        "<ul><li><div>Favourite food: pest...</div></li></ul>"
     );
   }
 
@@ -22,7 +22,7 @@
     notelist.create("Favourite drink: ale");
     assert.isTrue(
       notelistview.display() ===
-        "<ul><li><div>Favourite food: pesto</div></li><li><div>Favourite drink: ale</div></li></ul>"
+        "<ul><li><div>Favourite food: pest...</div></li><li><div>Favourite drink: ale...</div></li></ul>"
     );
   }
 

@@ -13,11 +13,20 @@
           "<ul>",
           notes
             .map(function(note) {
-              return "<li><div>" + note.getText() + "</div></li>";
+              return reduceNote(note.getText());
             })
             .join(""),
           "</ul>"
         ].join("");
+      }
+
+      function reduceNote(noteText) {
+        var wholenote = noteText;
+        var reducednote = [];
+        for (i = 0; i < 20; i++) {
+          reducednote.push(wholenote.charAt(i));
+        }
+        return "<li><div>" + reducednote.join("") + "...</div></li>";
       }
     }
   };

@@ -5,7 +5,7 @@
 
     assert.contains(
       controller.updateHTML(),
-      "<ul><li><div>Favourite drink: seltzer</div></li></ul>"
+      "<ul><li><div>Favourite drink: sel...</div></li></ul>"
     );
   }
   //
